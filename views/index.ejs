@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partial/head.ejs") %>
+  <body>
+    <audio autoplay>
+      <source src="../public/Snowfall  Edit Audio.mp3" type="audio/mp3" />
+    </audio>
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="../public/video.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Meta Engine</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto text-center">
+                <a
+                  class="nav-link"
+                  style="padding-left: 20px; padding-right: 20px"
+                  aria-current="page"
+                  href="/"
+                  >Home</a
+                >
+                <a
+                  class="nav-link"
+                  style="padding-left: 20px; padding-right: 20px"
+                  href="/features"
+                  >Features</a
+                >
+                <a
+                  class="nav-link"
+                  style="padding-left: 20px; padding-right: 20px"
+                  href="/addNew"
+                  >Add-New</a
+                >
+                <a
+                  class="nav-link"
+                  style="padding-left: 20px; padding-right: 20px"
+                  href="/contact"
+                  >Contact-us</a
+                >
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="content">
+        <p class="header">Browse Your Favourite CAR</p>
+        <p class="header-about">
+          My passion for cars led me to make a website dedicated to cool cars.
+          On my website, I share information about the latest car models,
+          upcoming car shows, and car culture. I also write reviews of cool cars
+          that I've driven.
+        </p>
+        <a href="/addNew" class="btn btn-outline-info">Add a Car</a>
+        <!-- <button type="button" class="btn btn-outline-primary">Add a Car</button> -->
+      </div>
+    </div>
+
+    <!-- card section  -->
+
+    <h1 class="text-center mt-5 text-black">Cars coming soon in India</h1>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Card content here -->
+            <img
+              src="../Assets/Image/first.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jaguar F-Type</h5>
+              <hr />
+              <p class="card-text">
+                The Jaguar F-Type is a series of two-door, two-seater grand
+                tourers manufactured by British car manufacturer Jaguar Land
+                Rover under their Jaguar Cars marque since 2013
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Card content here -->
+            <!-- <div class="card"> -->
+            <img
+              src="../Assets/Image/second.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Porsche 718 Boxster</h5>
+              <hr />
+              <p class="card-text">
+                Although the 2023 718 Boxster is technically the brand's
+                entry-level car, its brilliant handling, powerful turbocharged
+                engines,
+              </p>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <!-- Card content here -->
+            <img
+              src="../Assets/Image/third.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">BMW M4</h5>
+              <hr />
+              <p class="card-text">
+                The BMW M4 is a high-performance version of the BMW 4 Series
+                coupes and convertibles developed by BMW's motorsport division,
+                BMW M, and marketed since 2014
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more cards here -->
+        <% cars.forEach(car =>{ %>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="<%= car.image %>" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"><%= car.name %></h5>
+              <hr />
+              <p class="card-text"><%= car.about %></p>
+            </div>
+          </div>
+        </div>
+
+        <% }) %>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="row">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+
+      <div class="row">
+        <ul>
+          <li><a href="/contact">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <p>MetaPhoric Copyright © 2023 MetaPhoric - All rights reserved</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

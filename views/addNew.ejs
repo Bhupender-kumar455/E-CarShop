@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partial/head.ejs") %>
+  <body>
+    <h2 class="text-center mt-2 text-black">Add new Car</h2>
+
+    <form class="mb-3 container-sm" action="/cars" method="POST">
+      <label for="formFile" class="form-label text-black">URL of Image</label>
+      <input
+        class="form-control mb-5 p-2"
+        name="image"
+        type="text"
+        placeholder="Ex - https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhSN40Cwcx-oXFHqpXIlV9w2OZX8M6IWwStlafPWoEEg&s "
+        id="formFile"
+      />
+
+      <label for="name" class="form-label text-black"
+        >Write the name of Car</label
+      >
+      <input
+        class="form-control mb-5"
+        type="text"
+        name="name"
+        placeholder="Ex - Audi A7"
+        aria-label="default input example"
+        id="name"
+      />
+      <label for="about" class="form-label text-black">About of Car</label>
+      <textarea
+        class="form-control mb-5"
+        type="text"
+        name="about"
+        placeholder="Car's details"
+        aria-label="default input example"
+        id="about"
+      ></textarea>
+      <button class="btn btn-outline-light">Submit</button>
+    </form>
+  </body>
+</html>
